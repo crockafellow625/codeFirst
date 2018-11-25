@@ -1,9 +1,15 @@
 // Variables
 
+
 // Mixins
+@mixin nTransition() {
+    transition: .3s ease-in-out;
+}
 
 // Fonts
 
+
+// Global
 * {
     margin: 0;
     padding: 0;
@@ -12,4 +18,151 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+}
+
+// Main Header
+.mainHeaderContainer {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+    // Main Navigation Container
+    .mainNavigationContainer {
+        position: relative;
+        width: 100%;
+        height: auto;
+        z-index: 1000;
+
+        .mainNav {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-around;
+            padding-top: 25px;
+
+            .navContainer {
+                text-align: right;
+
+                ul {
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                    display: inline;
+
+                    .navLink,
+                    .letsTalkBtn {
+                        @include nTransition();
+                        color: #888;
+                        text-decoration: none;
+                        padding-left: 15px;
+                        font-weight: 700;
+                        font-size: 12px;
+
+                        &:hover {
+                            color: #fff;
+                        }
+                    }
+
+                    .letsTalkBtn {
+                        color: #fff;
+                        background: rgba(201, 200, 200, 0.462);
+                        border-radius: 50px;
+                        padding: 10px;
+                        margin-left: 10px;
+
+                        &:hover {
+                            background: rgba(236, 236, 236, 0.503);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Main Header Content
+
+    .mainHeaderContent {
+        z-index: 1000;
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .lgHeading,
+        .smHeading {
+            text-align: center;
+            color: #fff;
+            line-height: 60px;
+        }
+
+        .lgHeading {
+            font-size: 40px;
+        }
+
+        .smHeading {
+            font-size: calc(40px / 2);
+            padding-bottom: 20px;
+        }
+
+        .btnContainer {
+            text-align: center;
+            margin: 25px;
+
+            .qsBtn,
+            .gtkuBtn {
+                @include nTransition();
+                display: inline;
+                padding-left: 20px;
+                cursor: pointer;
+
+                a {
+                    color: #fff;
+                    text-decoration: none;
+                    font-size: 15px;
+                }
+            }
+
+            .qsBtn {
+                background: #2D80F3;
+                border-radius: 50px;
+                margin-right: 11px;
+                padding: 15px 28px;
+                &:hover {
+                    background: darken(#2D80F3, 10);
+                }
+            }
+
+            .gtkuBtn {
+                background: #646C74;
+                border-radius: 50px;
+                padding: 15px;
+                margin-right: 25px;
+            }
+        }
+
+        .mainHeaderLogosContainer {
+            padding-top: 113px;
+        }
+    }
+
+    // Video
+    .videoContainer {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        video {
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
 }

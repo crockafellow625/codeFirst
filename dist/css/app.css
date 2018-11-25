@@ -5,3 +5,105 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif; }
+
+.mainHeaderContainer {
+  width: 100%;
+  height: 100vh;
+  position: relative; }
+  .mainHeaderContainer .mainNavigationContainer {
+    position: relative;
+    width: 100%;
+    height: auto;
+    z-index: 1000; }
+    .mainHeaderContainer .mainNavigationContainer .mainNav {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-around;
+      padding-top: 25px; }
+      .mainHeaderContainer .mainNavigationContainer .mainNav .navContainer {
+        text-align: right; }
+        .mainHeaderContainer .mainNavigationContainer .mainNav .navContainer ul {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          display: inline; }
+          .mainHeaderContainer .mainNavigationContainer .mainNav .navContainer ul .navLink,
+          .mainHeaderContainer .mainNavigationContainer .mainNav .navContainer ul .letsTalkBtn {
+            transition: .3s ease-in-out;
+            color: #888;
+            text-decoration: none;
+            padding-left: 15px;
+            font-weight: 700;
+            font-size: 12px; }
+            .mainHeaderContainer .mainNavigationContainer .mainNav .navContainer ul .navLink:hover,
+            .mainHeaderContainer .mainNavigationContainer .mainNav .navContainer ul .letsTalkBtn:hover {
+              color: #fff; }
+          .mainHeaderContainer .mainNavigationContainer .mainNav .navContainer ul .letsTalkBtn {
+            color: #fff;
+            background: rgba(201, 200, 200, 0.462);
+            border-radius: 50px;
+            padding: 10px;
+            margin-left: 10px; }
+            .mainHeaderContainer .mainNavigationContainer .mainNav .navContainer ul .letsTalkBtn:hover {
+              background: rgba(236, 236, 236, 0.503); }
+  .mainHeaderContainer .mainHeaderContent {
+    z-index: 1000;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    .mainHeaderContainer .mainHeaderContent .lgHeading,
+    .mainHeaderContainer .mainHeaderContent .smHeading {
+      text-align: center;
+      color: #fff;
+      line-height: 60px; }
+    .mainHeaderContainer .mainHeaderContent .lgHeading {
+      font-size: 40px; }
+    .mainHeaderContainer .mainHeaderContent .smHeading {
+      font-size: calc(40px / 2);
+      padding-bottom: 20px; }
+    .mainHeaderContainer .mainHeaderContent .btnContainer {
+      text-align: center;
+      margin: 25px; }
+      .mainHeaderContainer .mainHeaderContent .btnContainer .qsBtn,
+      .mainHeaderContainer .mainHeaderContent .btnContainer .gtkuBtn {
+        transition: .3s ease-in-out;
+        display: inline;
+        padding-left: 20px;
+        cursor: pointer; }
+        .mainHeaderContainer .mainHeaderContent .btnContainer .qsBtn a,
+        .mainHeaderContainer .mainHeaderContent .btnContainer .gtkuBtn a {
+          color: #fff;
+          text-decoration: none;
+          font-size: 15px; }
+      .mainHeaderContainer .mainHeaderContent .btnContainer .qsBtn {
+        background: #2D80F3;
+        border-radius: 50px;
+        margin-right: 11px;
+        padding: 15px 28px; }
+        .mainHeaderContainer .mainHeaderContent .btnContainer .qsBtn:hover {
+          background: #0d65e0; }
+      .mainHeaderContainer .mainHeaderContent .btnContainer .gtkuBtn {
+        background: #646C74;
+        border-radius: 50px;
+        padding: 15px;
+        margin-right: 25px; }
+    .mainHeaderContainer .mainHeaderContent .mainHeaderLogosContainer {
+      padding-top: 113px; }
+  .mainHeaderContainer .videoContainer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; }
+    .mainHeaderContainer .videoContainer video {
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
