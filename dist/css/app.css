@@ -9,17 +9,24 @@ body {
 .mainHeaderContainer {
   width: 100%;
   height: 100vh;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   .mainHeaderContainer .mainNavigationContainer {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     width: 100%;
-    height: auto;
-    z-index: 1000; }
+    height: 60px;
+    z-index: 9999; }
+    .mainHeaderContainer .mainNavigationContainer .mainNavigationContainer.scrolled {
+      transition: .3s ease-in-out;
+      background: #000; }
     .mainHeaderContainer .mainNavigationContainer .mainNav {
       display: flex;
       flex-wrap: wrap;
       flex-direction: row;
-      justify-content: space-around;
+      justify-content: space-evenly;
       padding-top: 25px; }
       .mainHeaderContainer .mainNavigationContainer .mainNav .navContainer {
         text-align: right; }
@@ -107,3 +114,63 @@ body {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%); }
+
+.servicesContainer {
+  width: 100%;
+  height: 25em;
+  background: #fff;
+  padding: 115px 0 25px 25px; }
+  .servicesContainer .lgsHeading {
+    color: #222;
+    font-size: 35px;
+    text-align: center; }
+  .servicesContainer .flecsContainer {
+    display: flex;
+    flex-wrap: no-wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-grow: 5;
+    margin: 50px 100px; }
+    @media only screen and (max-width: 768px) {
+      .servicesContainer .flecsContainer {
+        flex-wrap: wrap; } }
+    .servicesContainer .flecsContainer .flexsItem {
+      background: #fff;
+      margin-right: 15px;
+      padding: 50px; }
+      @media only screen and (max-width: 768px) {
+        .servicesContainer .flecsContainer .flexsItem {
+          margin-bottom: 25px;
+          padding: 50px;
+          border-radius: 5px; } }
+      .servicesContainer .flecsContainer .flexsItem .fiHeading {
+        text-align: center;
+        font-size: 25px;
+        font-weight: 500;
+        color: #111; }
+      .servicesContainer .flecsContainer .flexsItem .fiPara {
+        padding-top: 15px;
+        text-align: center;
+        color: #333;
+        line-height: 25px; }
+      .servicesContainer .flecsContainer .flexsItem .fI1 {
+        background: url("/dist/img/icons.png");
+        background-position: 0px -180px;
+        width: 180px;
+        height: 180px;
+        margin-left: 22%;
+        margin-bottom: 25px; }
+      .servicesContainer .flecsContainer .flexsItem .fI2 {
+        background: url("/dist/img/icons.png");
+        background-position: -540px -360px;
+        width: 180px;
+        height: 180px;
+        margin-left: 22%;
+        margin-bottom: 25px; }
+      .servicesContainer .flecsContainer .flexsItem .fI3 {
+        background: url("/dist/img/icons.png");
+        background-position: 0px -360px;
+        width: 180px;
+        height: 180px;
+        margin-left: 22%;
+        margin-bottom: 25px; }

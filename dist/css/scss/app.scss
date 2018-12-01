@@ -25,19 +25,28 @@ body {
     width: 100%;
     height: 100vh;
     position: relative;
+    overflow: hidden;
 
     // Main Navigation Container
     .mainNavigationContainer {
-        position: relative;
+        position: fixed;
+        top:0;
+        left:0;
+        right:0;
         width: 100%;
-        height: auto;
-        z-index: 1000;
+        height:60px;
+        z-index: 9999;
+
+        .mainNavigationContainer.scrolled {
+            @include nTransition();
+            background: #000;
+        }
 
         .mainNav {
             display: flex;
             flex-wrap: wrap;
             flex-direction: row;
-            justify-content: space-around;
+            justify-content: space-evenly;
             padding-top: 25px;
 
             .navContainer {
@@ -127,6 +136,7 @@ body {
                 border-radius: 50px;
                 margin-right: 11px;
                 padding: 15px 28px;
+
                 &:hover {
                     background: darken(#2D80F3, 10);
                 }
@@ -163,6 +173,87 @@ body {
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+        }
+    }
+}
+
+// Services Section
+
+.servicesContainer {
+    width: 100%;
+    height: 25em;
+    background: #fff;
+    padding: 115px 0 25px 25px;
+
+    .lgsHeading {
+        color: #222;
+        font-size: 35px;
+        text-align: center;
+    }
+
+    .flecsContainer {
+        display: flex;
+        flex-wrap: no-wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-grow: 5;
+        margin: 50px 100px;
+
+        @media only screen and (max-width: 768px) {
+            flex-wrap: wrap;
+        }
+
+        .flexsItem {
+            background: #fff;
+            margin-right: 15px;
+            padding: 50px;
+
+            @media only screen and (max-width: 768px) {
+                margin-bottom: 25px;
+                padding: 50px;
+                border-radius: 5px;
+            }
+
+            .fiHeading {
+                text-align: center;
+                font-size: 25px;
+                font-weight: 500;
+                color: #111;
+            }
+
+            .fiPara {
+                padding-top: 15px;
+                text-align: center;
+                color: #333;
+                line-height: 25px;
+            }
+
+            .fI1 {
+                background: url('../../img/icons.png');
+                background-position: 0px -180px;
+                width: 180px;
+                height: 180px;
+                margin-left: 22%;
+                margin-bottom: 25px;
+            }
+
+            .fI2 {
+                background: url('../../img/icons.png');
+                background-position: -540px -360px;
+                width: 180px;
+                height: 180px;
+                margin-left: 22%;
+                margin-bottom: 25px;
+            }
+
+            .fI3 {
+                background: url('../../img/icons.png');
+                background-position: 0px -360px;
+                width: 180px;
+                height: 180px;
+                margin-left: 22%;
+                margin-bottom: 25px;
+            }
         }
     }
 }
