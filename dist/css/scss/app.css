@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.mainHeaderContainer {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.mainHeaderContainer .mainNavigationContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 9999;
+}
+
+.mainHeaderContainer .mainNavigationContainer .mainNavigationContainer.scrolled {
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  background: #000;
+}
+
+.mainHeaderContainer .mainNavigationContainer .mainNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding-top: 25px;
+}
+
+.mainHeaderContainer .mainNavigationContainer .mainNav .navContainer {
+  text-align: right;
+}
+
+.mainHeaderContainer .mainNavigationContainer .mainNav .navContainer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline;
+}
+
+.mainHeaderContainer .mainNavigationContainer .mainNav .navContainer ul .navLink,
+.mainHeaderContainer .mainNavigationContainer .mainNav .navContainer ul .letsTalkBtn {
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  color: #888;
+  text-decoration: none;
+  padding-left: 15px;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.mainHeaderContainer .mainNavigationContainer .mainNav .navContainer ul .navLink:hover,
+.mainHeaderContainer .mainNavigationContainer .mainNav .navContainer ul .letsTalkBtn:hover {
+  color: #fff;
+}
+
+.mainHeaderContainer .mainNavigationContainer .mainNav .navContainer ul .letsTalkBtn {
+  color: #fff;
+  background: rgba(201, 200, 200, 0.462);
+  border-radius: 50px;
+  padding: 10px;
+  margin-left: 10px;
+}
+
+.mainHeaderContainer .mainNavigationContainer .mainNav .navContainer ul .letsTalkBtn:hover {
+  background: rgba(236, 236, 236, 0.503);
+}
+
+.mainHeaderContainer .mainHeaderContent {
+  z-index: 1000;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.mainHeaderContainer .mainHeaderContent .lgHeading,
+.mainHeaderContainer .mainHeaderContent .smHeading {
+  text-align: center;
+  color: #fff;
+  line-height: 60px;
+}
+
+.mainHeaderContainer .mainHeaderContent .lgHeading {
+  font-size: 40px;
+}
+
+.mainHeaderContainer .mainHeaderContent .smHeading {
+  font-size: calc(40px / 2);
+  padding-bottom: 20px;
+}
+
+.mainHeaderContainer .mainHeaderContent .btnContainer {
+  text-align: center;
+  margin: 25px;
+}
+
+.mainHeaderContainer .mainHeaderContent .btnContainer .qsBtn,
+.mainHeaderContainer .mainHeaderContent .btnContainer .gtkuBtn {
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  display: inline;
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+.mainHeaderContainer .mainHeaderContent .btnContainer .qsBtn a,
+.mainHeaderContainer .mainHeaderContent .btnContainer .gtkuBtn a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.mainHeaderContainer .mainHeaderContent .btnContainer .qsBtn {
+  background: #2D80F3;
+  border-radius: 50px;
+  margin-right: 11px;
+  padding: 15px 28px;
+}
+
+.mainHeaderContainer .mainHeaderContent .btnContainer .qsBtn:hover {
+  background: #0d65e0;
+}
+
+.mainHeaderContainer .mainHeaderContent .btnContainer .gtkuBtn {
+  background: #646C74;
+  border-radius: 50px;
+  padding: 15px;
+  margin-right: 25px;
+}
+
+.mainHeaderContainer .mainHeaderContent .mainHeaderLogosContainer {
+  padding-top: 113px;
+}
+
+.mainHeaderContainer .videoContainer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.mainHeaderContainer .videoContainer video {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.servicesContainer {
+  width: 100%;
+  height: 25em;
+  background: #fff;
+  padding: 115px 0 25px 25px;
+}
+
+.servicesContainer .lgsHeading {
+  color: #222;
+  font-size: 35px;
+  text-align: center;
+}
+
+.servicesContainer .flecsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: no-wrap;
+      flex-wrap: no-wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-flex: 5;
+      -ms-flex-positive: 5;
+          flex-grow: 5;
+  margin: 50px 100px;
+}
+
+@media only screen and (max-width: 768px) {
+  .servicesContainer .flecsContainer {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.servicesContainer .flecsContainer .flexsItem {
+  background: #fff;
+  margin-right: 15px;
+  padding: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+  .servicesContainer .flecsContainer .flexsItem {
+    margin-bottom: 25px;
+    padding: 50px;
+    border-radius: 5px;
+  }
+}
+
+.servicesContainer .flecsContainer .flexsItem .fiHeading {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 500;
+  color: #111;
+}
+
+.servicesContainer .flecsContainer .flexsItem .fiPara {
+  padding-top: 15px;
+  text-align: center;
+  color: #333;
+  line-height: 25px;
+}
+
+.servicesContainer .flecsContainer .flexsItem .fI1 {
+  background: url("../../img/icons.png");
+  background-position: 0px -180px;
+  width: 180px;
+  height: 180px;
+  margin-left: 22%;
+  margin-bottom: 25px;
+}
+
+.servicesContainer .flecsContainer .flexsItem .fI2 {
+  background: url("../../img/icons.png");
+  background-position: -540px -360px;
+  width: 180px;
+  height: 180px;
+  margin-left: 22%;
+  margin-bottom: 25px;
+}
+
+.servicesContainer .flecsContainer .flexsItem .fI3 {
+  background: url("../../img/icons.png");
+  background-position: 0px -360px;
+  width: 180px;
+  height: 180px;
+  margin-left: 22%;
+  margin-bottom: 25px;
+}
+/*# sourceMappingURL=app.css.map */
